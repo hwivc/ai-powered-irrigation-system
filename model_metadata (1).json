@@ -1,0 +1,84 @@
+{
+  "project": "AI-Based Smart Irrigation System Using Environmental Sensor Data",
+  "created": "2026-09-29T20:38:09",
+  "model_name": "Decision Tree (balanced)",
+  "model_parameters": {
+    "max_depth": 2,
+    "min_samples_leaf": 5
+  },
+  "feature_order": [
+    "Soil_Moisture",
+    "Temperature_C",
+    "Humidity"
+  ],
+  "feature_units": {
+    "Soil_Moisture": "% (assumed)",
+    "Temperature_C": "degrees Celsius",
+    "Humidity": "% relative humidity (assumed)"
+  },
+  "target": "Irrigation_Need",
+  "classes": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "irrigation_policy": {
+    "Low": "Irrigation Not Needed",
+    "Medium": "Irrigation Needed",
+    "High": "Irrigation Needed"
+  },
+  "training_value_ranges": {
+    "Soil_Moisture": [
+      8.0,
+      65.0
+    ],
+    "Temperature_C": [
+      12.0,
+      42.0
+    ],
+    "Humidity": [
+      25.0,
+      95.0
+    ]
+  },
+  "physical_limits": {
+    "Soil_Moisture": [
+      0,
+      100
+    ],
+    "Temperature_C": [
+      -20,
+      60
+    ],
+    "Humidity": [
+      0,
+      100
+    ]
+  },
+  "n_train": 8000,
+  "n_test": 2000,
+  "random_state": 42,
+  "test_metrics": {
+    "accuracy": 0.578,
+    "macro_precision": 0.4838,
+    "macro_recall": 0.5951,
+    "macro_f1": 0.4887,
+    "precision_Low": 0.8068,
+    "recall_Low": 0.5908,
+    "f1_Low": 0.6821,
+    "precision_Medium": 0.4677,
+    "recall_Medium": 0.5526,
+    "f1_Medium": 0.5066,
+    "precision_High": 0.177,
+    "recall_High": 0.6418,
+    "f1_High": 0.2774
+  },
+  "library_versions": {
+    "python": "3.12.3",
+    "scikit-learn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4",
+    "joblib": "1.5.3"
+  },
+  "notes": "Trained on the supplied dataset (source and collection method not documented). Not validated on real sensor data."
+}
