@@ -1,4 +1,4 @@
-# AI- Powered Smart Irrigation System Using Environmental Sensor Data
+# AI- Powered Irrigation System Using Environmental Sensor Data
 
 An AI + IoT prototype that predicts irrigation need from three sensor readings and turns that prediction into a
 **proposed** pump decision through a separate, configurable control layer.
@@ -37,7 +37,6 @@ The AI model does **not** calculate water volume or runtime. The control layer d
 | `smart_irrigation_model.ipynb` | The complete project notebook (Steps 1-38, appendix with the quick test function) |
 | `model_artifacts/irrigation_model.joblib` | Saved model (scikit-learn Pipeline: pass-through scaler + Decision Tree) |
 | `model_artifacts/model_metadata.json` | Feature order, classes, ranges, policy, metrics, library versions |
-| 
 | `README.md` | This file |
 
 **Data files the notebook reads (not included here - put them next to the notebook):**
